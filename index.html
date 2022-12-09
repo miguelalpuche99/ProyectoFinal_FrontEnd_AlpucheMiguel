@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing-Project</title>
+    <script src='https://kit.fontawesome.com/2ee0245f3d.js' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.6.1.js'></script>
+    <script src='fancybox/jquery.fancybox.js'></script>
+    <link rel='stylesheet' href='fancybox/jquery.fancybox.css'>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="jquery.tinycarousel.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="wow.min.js"></script>
+    <script>
+        //cambiar funcion slide
+        function cambiarSlide(x) {
+        if (x.matches) { // If media query matches
+            $("#slider").attr('id', 'slider1');
+        } else {
+            $("#slider4").responsiveSlides({
+            auto: false,
+            pager: false,
+            nav: true,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+              $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+              $('.events').append("<li>after event fired.</li>");
+            }
+          });
+        }
+        }
+      </script>
+</head>
+<body>
+    <script>
+        new WOW().init();
+    </script>
+    <header>
+        <div class="primer-header">
+            <div class="contacto">
+                <div class="icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="datos">
+                    <a href="#">1-800-1234-567</a>
+                    <a href="#">1-800-3214-654</a>
+                </div>
+            </div>
+            <figure class="logo">
+                <img src="images/logo-dark.png" alt="">
+            </figure>
+            <div class="contacto">
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="datos">
+                    <a href="#">2130 Fulton Street San Diego <br> CA 94117-1080 USA</a>
+                </div>
+            </div>
+        </div>
+        <div id="navbar">
+            <div class="nav-movil">
+                <div class="menu">
+                    <i class="fas fa-bars"></i> 
+                </div>
+                <div class="datos-menu">
+                    <i class="fa-solid fa-ellipsis-vertical"></i> 
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href='#' class="home">Home </a></li>
+                    <li><a href='about.html'>About</a></li>
+                    <li><a href='team.html'>Team</a></li>
+                    <li><a href='contact.html'>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="datos-movil">
+                <div class="contacto">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="datos">
+                        <a href="#">1-800-1234-567</a>
+                        <a href="#">1-800-3214-654</a>
+                    </div>
+                </div>
+                <div class="contacto">
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="datos">
+                        <a href="#">2130 Fulton Street San Diego <br> CA 94117-1080 USA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="slide">
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider4">
+              <li>
+                <img src="images/slide-01.jpg" alt="">
+                <div class="caption">
+                    <h1>WELCOME TO THE VISAGE <br>
+                        SURGERY CLINIC</h1>
+                    <p>Our unique team approach offers clients the latest in surgical and non‑surgical cosmetic and reconstructive procedures in a welcoming, safe environment.
+                    </p>
+                    <a href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </li>
+              <li>
+                <img src="images/slide-02.jpg" alt="">
+                <div class="caption">
+                    <h1>WE CAN HELP YOU GET THE <br>BODY OF YOUR DREAMS</h1>
+                    <p>Our team aims to deliver high-quality surgical and
+                        non-surgical services to all our customers.
+                    </p>
+                    <a href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </li>
+              <li>
+                <img src="images/slide-03.jpg" alt="">
+                <div class="caption">
+                    <h1>PROFESSIONAL PLASTIC <br>
+                        SURGERY SERVICES</h1>
+                    <p>Get the look you always wanted with our highly professional
+                        cosmetic and plastic surgery services.
+                    </p>
+                    <a href="#">MAKE AN APPOINTMENT</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+    </section>
+    <section class="info">
+        <article>
+            <div class="titulo-info wow animate__animated animate__fadeInLeft">
+                <i class="fa-regular fa-calendar-days"></i>
+                <h2>OPENING HOURS</h2>
+            </div>
+            <div class="contenido1 wow animate__animated animate__fadeInRight">
+                <div>
+                    <p>Mon–Fri</p>
+                    <p>8:00am–7:00pm</p>
+                </div>
+                <div>
+                    <p>Saturday</p>
+                    <p>9:00am–5:00pm</p>
+                </div>
+                <div>
+                    <p>Sunday</p>
+                    <p>9:00am–3:00pm</p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="titulo-info wow animate__animated animate__fadeInLeft">
+                <i class="fa-solid fa-calendar-day"></i>
+                <h2>DOCTORS' TIMETABLE</h2>
+            </div>
+            <div class="contenido wow animate__animated animate__fadeInRight">
+                <p>The following is for guidance only to help you plan your appointment with a preferred doctor or nurse. It does not guarantee availability as the doctors or nurses may sometimes be attending to other duties.</p>
+            </div>
+        </article>
+        <article>
+            <div class="titulo-info wow animate__animated animate__fadeInLeft">
+                <i class="fa-solid fa-phone"></i>
+                <h2>APPOINTMENTS</h2>
+            </div>
+            <div class="contenido wow animate__animated animate__fadeInRight">
+                <p>The first step towards a healthy life is to schedule an appointment. Please contact our office by phone or complete the appointment request form.</p>
+            </div>
+        </article>
+        <article>
+            <div class="titulo-info wow animate__animated animate__fadeInLeft">
+                <i class="fa-solid fa-briefcase-medical"></i>
+                <h2>EMERGENCY CASES</h2>
+            </div>
+            <div class="contenido wow animate__animated animate__fadeInRight">
+                <a href="#" class="llama">1-800-1234-567</a>
+                <p>Call us!</p>
+            </div>
+        </article>
+    </section>
+    <section id="slider1" class="cirugias ancho">
+        <div class="cont-flechas">
+            <a class="buttons prev" href="">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <a class="buttons next" href="">
+                <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+        <div class="viewport">
+            <div class="overview">
+                <article class="cards">
+                    <figure>
+                        <img src="images/surgeries1.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>EYELID SURGERY</h3>
+                        <a href="contact.html">BOOK AN APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="cards">
+                    <figure>
+                        <img src="images/surgeries2.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>NOSE SURGERY</h3>
+                        <a href="contact.html">BOOK AN APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="cards">
+                    <figure>
+                        <img src="images/surgeries3.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>FACIAL CONTOURING</h3>
+                        <a href="contact.html">BOOK AN APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="cards">
+                    <figure>
+                        <img src="images/surgeries4.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>ANTI-AGING</h3>
+                        <a href="contact.html">BOOK AN APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="cards">
+                    <figure>
+                        <img src="images/surgeries5.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>BODY CONTOURING</h3>
+                        <a href="contact.html">BOOK AN APPOINTMENT</a>
+                    </div>
+                </article>
+                <article class="cards">
+                    <figure>
+                        <img src="images/surgeries6.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>CELL THERAPY</h3>
+                        <a href="contact.html">BOOK AN APPOINTMENT</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="different">
+        <h1>WHAT MAKES US DIFFERENT</h1>
+        <div class="separador">
+            <div class="linea"></div>
+            <img src="images/flor.png" alt="">
+            <div class="linea"></div>
+        </div>
+        <div class="caracteristicas">
+            <article>
+                <img src="images/icon-pills-01.jpg" alt="">
+                <div>
+                    <h3>Modern Equipment</h3>
+                    <p>We use the latest medical equipment to deliver top-class cosmetic surgery services.</p>
+                </div>
+            </article>
+            <article>
+                <img src="images/icon-doctor-01.jpg" alt="">
+                <div>
+                    <h3>Qualified Doctors and Staff</h3>
+                    <p>Our team consists of more than 20 professionals who are highly trained to serve our patients’ needs.</p>
+                </div>
+            </article>
+            <article>
+                <img src="images/icon-medical-car-01.jpg" alt="">
+                <div>
+                    <h3>Effective Results</h3>
+                    <p>The skills of our surgeons and efficient treatment bring the desired results our clients expect.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="mas-info">
+        <article class="video">
+            <div class="contenedor-yt">
+                <iframe 
+                src="https://www.youtube.com/embed/rZ30RIk8RN0" frameborder="0"  allowfullscreen>
+                </iframe>
+            </div>
+        </article>
+        <div class="modal">
+            <a href="#" id="Btn">Suscribe Now</a>
+        </div>
+    </section>
+    <section id="modal" class="fondomodal">
+        <div class="contenidomodal">
+            <div class="top-modal">
+                <h3>NEWSLETTER</h3>
+                <i id="cerrarbtn" class="cerrarmodal fa-solid fa-square-xmark"></i>
+            </div>
+            <p>Enter your email address to get the latest news, special events and student activities.</p>
+            <p>You can also receive up-to-date news, new patient information and other useful stuff, delivered right to your inbox.</p>
+            <form>
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" placeholder="Email*" required>
+                <button type="submit" class="btn_submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <figure>
+            <img src="images/logo-dark.png" alt="">
+        </figure>
+        <p>© 2022 All Rights Reserved. Terms of Use and Privacy Policy</p>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="wifi"><i class="fa-solid fa-wifi"></i></a>
+        </div>
+        <div class="subir">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+    </footer>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        };
+        $(document).ready(function () {
+			$('#slider1').tinycarousel();
+		});
+        //variables para mostrar modal
+        var fondomodal = document.getElementById("modal");
+        var btn = document.getElementById("Btn");
+        var cerrar = document.getElementById("cerrarbtn");
+
+        btn.onclick = function () {
+            fondomodal.style.display = "block";
+        };
+        cerrar.onclick = function () {
+            fondomodal.style.display = "none";
+        };
+        window.onclick = function (event) {
+            if (event.target == fondomodal) {
+                fondomodal.style.display = "none";
+            }
+        };
+        //script para el boton subir
+        $(document).ready(function(){
+            $(".subir").click(function(){
+                $("html,body").animate({
+                    scrollTop: "0px",
+                },
+                1000
+                );
+            });
+        });
+        //script para el menu desplegable
+        $(".menu").click(function () {
+            $("nav").slideToggle();
+        });
+        $(".datos-menu").click(function () {
+            $(".datos-movil").slideToggle();
+        });
+        //variables para media query
+        var x = window.matchMedia("(max-width: 480px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(cambiarSlide) // Attach listener function on state changes
+    </script>
+</body>
+</html>
